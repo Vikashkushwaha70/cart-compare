@@ -1,0 +1,418 @@
+/* Root background like mobile app */
+.qc-root {
+  min-height: 100vh;
+  background: #020617;
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 32px;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Phone shell */
+.qc-shell {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  background: #020617;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  padding: 16px 14px 80px;
+  position: relative;
+}
+
+/* Top Location + search area */
+.qc-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.qc-location-block {
+  background: #020617;
+  padding: 4px 2px 2px;
+}
+
+.qc-location-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.qc-location-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.qc-location-arrow {
+  font-size: 12px;
+}
+
+.qc-location-input {
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  padding: 7px 12px;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+  outline: none;
+}
+
+/* big search bar */
+.qc-main-search {
+  margin-top: 4px;
+}
+
+.qc-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #020617;
+  border-radius: 999px;
+  padding: 10px 12px;
+  border: 1px solid #111827;
+}
+
+.qc-search-icon {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.qc-search-input-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.qc-search-input-wrap input::placeholder {
+  color: #6b7280;
+}
+
+/* Store tiles section */
+.qc-store-section {
+  background: #020617;
+  border-radius: 18px;
+  padding: 10px 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #111827;
+}
+
+.qc-store-header {
+  font-size: 12px;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.qc-store-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.qc-store-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.qc-store-strip::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+.qc-store-card {
+  min-width: 80px;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #111827;
+  padding: 6px 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.qc-store-eta {
+  font-size: 11px;
+  color: #e5e7eb;
+}
+
+.qc-store-logo-wrap {
+  width: 62px;
+  height: 30px;
+  border-radius: 8px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qc-store-logo-wrap img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.qc-store-logo-fallback {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.qc-store-closed .qc-store-eta {
+  color: #f97373;
+}
+
+.qc-store-na .qc-store-eta {
+  color: #eab308;
+}
+
+/* Sections generic */
+.qc-section {
+  margin-top: 14px;
+}
+
+.qc-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.qc-clear-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Recent search chips */
+.qc-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 26px;
+}
+
+.qc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  border: 1px solid #111827;
+  background: #020617;
+  padding: 5px 9px;
+  font-size: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.qc-chip-icon {
+  font-size: 12px;
+}
+
+.qc-chip-empty {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Trending cards */
+.qc-trending-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.qc-trending-row::-webkit-scrollbar {
+  height: 4px;
+}
+
+.qc-trending-card {
+  min-width: 80px;
+  background: #000000;
+  border-radius: 18px;
+  border: 1px solid #111827;
+  padding: 6px 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.qc-trending-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1d4ed8, #22c55e);
+}
+
+.qc-trending-name {
+  font-size: 12px;
+}
+
+/* Status texts */
+.qc-status-text {
+  margin-top: 14px;
+  font-size: 13px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.qc-status-error {
+  color: #fecaca;
+}
+
+/* Results table reuse styles from earlier */
+.table-card {
+  width: 100%;
+  margin-top: 10px;
+  background-color: rgba(15, 23, 42, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  overflow: hidden;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.results-table thead {
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9, #22c55e);
+  color: white;
+}
+
+.results-table th,
+.results-table td {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.row-base {
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  background-color: rgba(15, 23, 42, 0.98);
+}
+
+.row-base:nth-child(even) {
+  background-color: rgba(15, 23, 42, 0.93);
+}
+
+.row-cheapest {
+  background-color: rgba(22, 163, 74, 0.18);
+}
+
+.store-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.store-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: white;
+  padding: 2px;
+}
+
+.best-badge {
+  margin-left: 2px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.9);
+  color: white;
+}
+
+.price-cell {
+  font-weight: 600;
+}
+
+.link-view {
+  color: #38bdf8;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+/* Download + logo */
+.qc-download {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.qc-store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.qc-store-btn {
+  border-radius: 999px;
+  border: 1px solid #111827;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.qc-brand {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Floating WhatsApp button */
+.qc-whatsapp {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .qc-shell {
+    border-radius: 0;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .results-table {
+    min-width: 520px;
+  }
+}
